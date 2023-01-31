@@ -10,17 +10,20 @@ export default class HtmlCsRunner {
 
     setStandard(standard) {
         this.params.standard = standard
+        return this
     }
 
     setIgnoreCodes(ignoreCodes) {
         this.params.ignoreCodes = ignoreCodes
+        return this
     }
 
     setPageTitle(title) {
         this.params.pageTitle = title
+        return this
     }
 
     async execute() {
-        await this.a11y.execute(Engine.HTMLCS, JSON.stringify(this.params))
+        return await this.a11y.execute(Engine.HTMLCS, JSON.stringify(this.params))
     }
 }

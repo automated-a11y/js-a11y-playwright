@@ -10,9 +10,10 @@ export default class AxeRunner {
 
     setPageTitle(title) {
         this.params.pageTitle = title
+        return this
     }
 
     async execute() {
-        await this.a11y.execute(Engine.AXE, JSON.stringify(this.params))
+        return await this.a11y.execute(Engine.AXE, JSON.stringify(this.params))
     }
 }
