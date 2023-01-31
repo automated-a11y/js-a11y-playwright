@@ -8,5 +8,12 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.30.0",
+    "playwright": "^1.30.0"
+  },
+  "dependencies": {
+    "uuid": "^9.0.0"
+  }
 }

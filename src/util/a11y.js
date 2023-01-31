@@ -21,6 +21,7 @@ export default class A11y {
         const reportpath = path.join(process.env.PWD, "reports", engine, "json")
         !existsSync(reportpath) && mkdirSync(reportpath, { recursive: true })
         writeFileSync(path.join(reportpath, `${uuidv4()}.json`), JSON.stringify(data, null, 4))
+        return data
     }
 
 }
