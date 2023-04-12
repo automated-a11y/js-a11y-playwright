@@ -1,7 +1,7 @@
 import { Engine } from "./a11y/engine.js"
 import A11y from "./util/a11y.js"
 
-export default class HtmlCsRunner {
+export class HtmlCsRunner {
 
     constructor(page) {
         this.a11y = new A11y(page)

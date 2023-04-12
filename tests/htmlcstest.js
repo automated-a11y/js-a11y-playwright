@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import HtmlCsRunner from "../src/htmlcsrunner.js";
+import { HtmlCsRunner } from "../src/htmlcsrunner.js";
 
 let htmlcsrunner;
 

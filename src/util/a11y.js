@@ -12,7 +12,7 @@ export default class A11y {
     async execute(engine, params) {
         await this.page.waitForLoadState('domcontentloaded')
         const jsfile = engine == Engine.AXE ? "axe.js" : "htmlcs.js"
-        const filepath = path.join(process.env.PWD, "src", "js", jsfile)
+        const filepath = path.resolve(__dirname, `../js/${jsfile}`)
         const jstext = readFileSync(filepath, { encoding: 'utf8', flag: 'r' })
         await this.page.evaluate((js) => window.eval(js), jstext)
         const data = engine == Engine.AXE ?

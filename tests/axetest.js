@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import AxeRunner from "../src/axerunner.js";
+import { AxeRunner } from "../src/axerunner.js";
 
 let axerunner;
 
